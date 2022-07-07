@@ -2794,7 +2794,7 @@ const Data = [
      "Party": "XYZ"
     }
    ]
-   
+
 //for getting all Data---
 let allData = document.getElementById('allData');
 
@@ -2848,24 +2848,25 @@ function filtermaleFemale(male,female){
 //filter Function-------
 let select = document.getElementById('searchBar').value;
 
-
 function getFilteredData(){
     let XYZ = 0; let JBC = 0; let NVS = 0;let NCS = 0; let KLM = 0;let NSP = 0;
         Data.forEach(data =>{
-            if (data.Constituency == select){
-                if (data.Party == "XYZ"){
-                XYZ += 1}
-                else if (data.Party == "JBC"){
-                    JBC += 1
-                } else if (data.Party == "NVS"){
-                        NVS += 1
-                } else if (data.Party == "NCS"){
-                    NCS += 1
-                } else if (data.Party == "KLM"){
-                    KLM += 1
-                }else if (data.Party == "NSP"){
-                    NSP += 1
-                }   
+            if (select){
+                if (data.Constituency == select){
+                    if (data.Party == "XYZ"){
+                    XYZ += 1}
+                    else if (data.Party == "JBC"){
+                        JBC += 1
+                    } else if (data.Party == "NVS"){
+                            NVS += 1
+                    } else if (data.Party == "NCS"){
+                        NCS += 1
+                    } else if (data.Party == "KLM"){
+                        KLM += 1
+                    }else if (data.Party == "NSP"){
+                        NSP += 1
+                    }
+            }       
             }
         })
         let partyContainer = document.getElementById('filterParty');
@@ -2967,30 +2968,32 @@ let Group18_30 =0; let Group30_45 = 0;let Group45_60 = 0; let Group60 = 0
             ageGroupele.append(ageGrouparr[i])
         }
         //age group chart-------- 
-    getchart = () =>{
-        const data = {
-            labels: partylabel,
-            datasets: [{
-                label: 'My First Dataset',
-                data: partyvalue,
-                backgroundColor: [
-                'rgb(255, 99, 132)',
-                'rgb(54, 162, 235)',
-                'rgb(255, 205, 86)'
-                ],
-                hoverOffset: 4
-            }]
-            };
-        const config = {
-        type: 'pie',
-        data,
-        options: {}
-        };
-        const myChart = new Chart(
-        document.getElementById('myChart2'),
-        config
-        );
-    }
-    
+    // getchart = () =>{
+    //     const data = {
+    //         labels: partylabel,
+    //         datasets: [{
+    //             label: 'My First Dataset',
+    //             data: partyvalue,
+    //             backgroundColor: [
+    //             'rgb(255, 99, 132)',
+    //             'rgb(54, 162, 235)',
+    //             'rgb(255, 205, 86)'
+    //             ],
+    //             hoverOffset: 4
+    //         }]
+    //         };
+    //     const config = {
+    //     type: 'pie',
+    //     data,
+    //     options: {}
+    //     };
+    //     const myChart = new Chart(
+    //     document.getElementById('myChart2'),
+    //     config
+    //     );
+    // }
 }
+
+
+
 
