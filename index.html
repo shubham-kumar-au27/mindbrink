@@ -34,9 +34,7 @@
             <option value="JKL">JKL</option>
             <option value="DEF">DEF</option>
         </select>
-    
-    
-    </onclick> <button id="searchButton" onclick="getFilteredData()">search</button>
+    <button style="background-color: black; color:whitesmoke;" id="searchButton" onclick="getFilteredData()">search</button>
     </div>
     
     <div class="container">
@@ -50,17 +48,45 @@
         </div>
         <div style="background-color: aqua; width: 150px;height: 140px; border: 1px solid red;margin: 20px;" id="filterParty">
             <h3>PARTIES</h3>
+            <div id="XYZ">
+                <span>XYZ : 155</span>
+            </div>
+            <div id="JBC">
+                <span>JBC : 2</span>
+            </div>
+            <div id="NVS">
+                <span>NVS : 83</span>
+            </div>
+            <div id="NCS">
+                <span>NCS : 1</span>
+            </div>
+            <div id="KLM">
+                <span>KLM : 11</span>
+            </div>
+            <div id="NSP">
+                <span>NSP : 2</span>
+            </div>
         </div> 
         <div style="background-color: aqua; width: 150px;height: 120px; border: 1px solid red;margin: 20px;" id="ageGroup">
             <h3>AGE DEMOGRAPHIC</h3>
+            <div id="18">
+                <span>Age(18-30) : 45</span>
+            </div>
+            <div id="30">
+                <span>Age(30-45) : 97</span>
+            </div>
+            <div id="45">
+                <span>Age(45-60) : 76</span>
+            </div>
+            <div id="60">Age(60 +) : 36</div>
         </div>
     </div>
     <div id="chartContainer">
-    <div id="partyContainer" style="position: relative; height: 150px; width: 190px">
+    <div id="partyContainer" style="position: relative; height: 180px; width: 190px;">
         <label for="partyChart">PartyChart</label>
         <canvas id="myChart"></canvas>
     </div>
-    <div id="ageContainer" style="position: relative; height: 150px; width: 190px">
+    <div id="ageContainer" style="position: relative; height: 180px; width: 190px;">
         <label for="ageContainer">Age Chart</label>
         <canvas id="myChart2"></canvas>
     </div>

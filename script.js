@@ -2794,6 +2794,21 @@ const Data = [
      "Party": "XYZ"
     }
    ]
+var age18 = 0;var age30 = 0; var age45 = 0; var age60 = 0;
+Data.forEach(val =>{
+    if (val.AgeGroup == '18-30'){
+        age18 += 1
+    }else if (val.AgeGroup == '30-45'){
+        age30 += 1
+    }
+    else if (val.AgeGroup == '45-60'){
+        age45 += 1
+    }else if (val.AgeGroup == '60+'){
+        age60 += 1
+    }
+})
+console.log(age18,age30,age45,age60)
+
 // --------------------------------------------------------------------------------------------------------   
 
 //for getting all Data---
@@ -2874,32 +2889,13 @@ function getFilteredData(){
             }
         }
     })
-    let partyContainer = document.getElementById('filterParty');
-    let xyzEle = document.createElement('p');
-    let xyztext = document.createTextNode(`XYZ: ${XYZ}`)
-    xyzEle.appendChild(xyztext)
-    // ----------------------------
-    let jbcEle = document.createElement('p');
-    let jbctext = document.createTextNode(`JBC : ${JBC}`) 
-    jbcEle.appendChild(jbctext)
-    let nvsEle = document.createElement('p');
-    let nvsText = document.createTextNode(`NVS ${NVS}`)
-    nvsEle.appendChild(nvsText)
-    let ncsEle = document.createElement('p');
-    let ncsText = document.createTextNode(`NCS : ${NCS}`)
-    ncsEle.appendChild(ncsText)
-    let klmEle = document.createElement('p');
-    let klmText = document.createTextNode(`KLM: ${KLM}`)
-    klmEle.appendChild(klmText)
-    let nspEle = document.createElement('p');
-    let nsptext = document.createTextNode(`NSP : ${NSP}`) 
-    nspEle.appendChild(nsptext)
-
-    let arrParty = [xyzEle,jbcEle,nvsEle,ncsEle,klmEle,nspEle]
-
-    for (let i = 0; i < arrParty.length; i++){
-        partyContainer.append(arrParty[i])
-    }
+    document.getElementById('XYZ').innerHTML = 'XYZ >>' + XYZ;
+    document.getElementById('JBC').innerHTML = 'JBC >>' + JBC;
+    document.getElementById('NVS').innerHTML = 'NVS >>' + NVS;
+    document.getElementById('NCS').innerHTML = 'NCS >>' + NCS;
+    document.getElementById('KLM').innerHTML = 'KLM >>' + KLM;
+    document.getElementById('NSP').innerHTML = 'NSP >>' + NSP;
+    
     //for party chart
     const partyChart = () =>{
         const partylabel = ['XYZ','JBC','NVS','NCS','KLM','NSP']
@@ -2913,11 +2909,14 @@ function getFilteredData(){
             backgroundColor: [
                 'rgb(255, 99, 132)',
                 'rgb(54, 162, 235)',
-                'rgb(255, 205, 86)'
+                'rgb(255, 205, 86)',
+                'rgb(180, 200, 86)',
+                'rgb(150, 205, 90)',
+                'rgb(130, 180, 86)',
             ],
             hoverOffset: 4
             }]
-        };
+        };      1
     const config = {
         type: 'pie',
         data,
@@ -2949,27 +2948,17 @@ const FilterByAge = () =>{
                 }
         }
     })
+    let group18per = (Group18_30/ Data.length)*100; 
+    let per18 = group18per.toFixed(2)
+    let group30per = (Group30_45/Data.length)*100; let per30 = group30per.toFixed(2)
+    let group45per = (Group45_60/Data.length)*100; let per45 =  group45per.toFixed(2)
+    let group60 = (Group60/Data.length)*100;  let per60 = group60.toFixed(2)
 
-        let ageGroupele = document.getElementById('ageGroup');
+        document.getElementById('18').innerHTML = '18-30 >>' + Group18_30 + '('+ per18 + ' %)';
+        document.getElementById('30').innerHTML = '30-45 >>' + Group30_45 + '(' + per30 + '%)';
+        document.getElementById('45').innerHTML = '45-60 >>' + Group45_60 + '(' + per45 + '%)';
+        document.getElementById('60').innerHTML = '60 ++ >>'+ Group60 + '(' + per60 + '%)';
 
-        let Group18_30ele = document.createElement('p')
-        let Group18_30txt = document.createTextNode(`18-30 >> ${Group18_30}`);
-        Group18_30ele.appendChild(Group18_30txt);
-        let Group30_45ele = document.createElement('p');
-        let Group30_45txt = document.createTextNode(`30-45 >> ${Group30_45}`);
-        Group30_45ele.appendChild(Group30_45txt);
-        let Group45_60ele = document.createElement('p')
-        let Group45_60eletxt = document.createTextNode(`40-60 >> ${Group45_60}`);
-        Group45_60ele.appendChild(Group45_60eletxt)
-        let Group60ele = document.createElement('li');
-        let Group60txt = document.createTextNode(`${Group60} 60++`);
-        Group60ele.appendChild(Group60txt);
-
-        let ageGrouparr = [Group18_30ele,Group30_45ele,Group45_60ele,Group60]
-
-        for (let i =0 ; i < ageGrouparr.length; i++){
-            ageGroupele.append(ageGrouparr[i])
-        }
         const ageChart = () =>{
             let ageLabel = ['18-30','30-45','45-60','60+']
             let ageData = [Group18_30,Group30_45,Group45_60,Group60]
@@ -2981,7 +2970,8 @@ const FilterByAge = () =>{
                   backgroundColor: [
                     'rgb(255, 99, 132)',
                     'rgb(54, 162, 235)',
-                    'rgb(255, 205, 86)'
+                    'rgb(255, 205, 86)',
+                    'rgb(200, 205, 86)'
                   ],
                   hoverOffset: 4
                 }]
