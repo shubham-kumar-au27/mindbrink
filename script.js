@@ -2847,7 +2847,7 @@ function filtermaleFemale(male,female){
 
 //filter Function-------
 let select = document.getElementById('searchBar').value;
-let XYZ = 0; let JBC = 0; let NVS = 0 ;let NCS =0; let KLM =0;let NSP =0;
+var XYZ = 0; var JBC = 0; var NVS = 0 ;var NCS =0; var KLM =0;var NSP =0;
 function getFilteredData(){
         Data.forEach(data =>{
             if (select){
