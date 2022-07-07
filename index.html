@@ -18,7 +18,12 @@
 }
 #chartContainer{
     display: flex;
-    justify-content: center;
+    align-content: center;
+    margin: 20px;
+    width: 550px;
+    height: 250px;
+    justify-content: space-between;
+
     
 }
 </style>
@@ -39,15 +44,15 @@
     
     <div class="container">
         <div id="allData">
-            <h4>SamplesCollected</h4>
+            <h4 style="background-color: black; color:antiquewhite">SamplesCollected</h4>
         </div>
         <div id="genderData">
-            <h3>GENDER DATA</h3>
+            <h3 style="background-color: black; color:antiquewhite">GENDER DATA</h3>
             <p>-------------------------</p>
             <div id="gender"></div>
         </div>
         <div style="background-color: aqua; width: 150px;height: 140px; border: 1px solid red;margin: 20px;" id="filterParty">
-            <h3>PARTIES</h3>
+            <h3 style="background-color: black; color:antiquewhite">PARTIES</h3>
             <div id="XYZ">
                 <span>XYZ : 155</span>
             </div>
@@ -68,7 +73,7 @@
             </div>
         </div> 
         <div style="background-color: aqua; width: 150px;height: 120px; border: 1px solid red;margin: 20px;" id="ageGroup">
-            <h3>AGE DEMOGRAPHIC</h3>
+            <h4 style="background-color: black; color:antiquewhite">AGE DEMOGRAPHIC</h4>
             <div id="18">
                 <span>Age(18-30) : 45</span>
             </div>
@@ -82,12 +87,12 @@
         </div>
     </div>
     <div id="chartContainer">
-    <div id="partyContainer" style="position: relative; height: 180px; width: 190px;">
-        <label for="partyChart">PartyChart</label>
+    <div id="partyContainer" style="position: relative; height: 220px; width: 190px; border: 1px solid red; ">
+        <h3 for="partyChart" style="background-color: black; color: antiquewhite;">PartyChart</h3>
         <canvas id="myChart"></canvas>
     </div>
-    <div id="ageContainer" style="position: relative; height: 180px; width: 190px;">
-        <label for="ageContainer">Age Chart</label>
+    <div id="ageContainer" style="position: relative; height: 220px; width: 190px; border: 1px solid red;">
+        <h3 for="ageContainer" style=" background-color: black; color: antiquewhite;">Age Chart</h3>
         <canvas id="myChart2"></canvas>
     </div>
 
