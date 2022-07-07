@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+    #genderData{
+    width:150px;
+    height:120px;
+    margin: 20px;
+    border: 1px solid red;
+    background-color: aqua;
+};
+/* #partyChart{
+    width: 200px;
+    height: 200px;
+} */
+</style>
+<body>
+    <nav id="navbar">
+        <h1>Survey-Data</h1>
+    </nav>
+    <div class="inputBox">
+        <label for=""><h3>Search By Constituency</h3></label>
+        <input onclick="getFilteredData()"type="text" id="searchBar" placeholder="Enter Constituency">
+    </div>
+    
+    <div class="container">
+        <div id="allData">
+            <h4>SamplesCollected</h4>
+        </div>
+        <div id="genderData">
+            <h3>GENDER DATA</h3>
+            <p>-------------------------</p>
+            <div id="gender"></div>
+        </div>
+        <div style="background-color: aqua; width: 150px;height: 140px; border: 1px solid red;margin: 20px;" id="filterParty">
+            <h3>PARTIES</h3>
+        </div> 
+        <div style="background-color: aqua; width: 150px;height: 120px; border: 1px solid red;margin: 20px;" id="ageGroup">
+            <h3>AGE DEMOGRAPHIC</h3>
+        </div>
+    </div>
+    <label for="partyChart">PartyChart</label>
+    <div id="chartContainer" style="position: relative; height: 150px; width: 190px">
+        <canvas id="myChart"></canvas>
+    </div>
+<script src="./script.js"></script>    
+</body>
+</html>
+
+
+
+
+
+

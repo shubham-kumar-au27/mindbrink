@@ -1,0 +1,16 @@
+{
+  "name": "mindbrink-assignment",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "dependencies": {
+    "json-server": "^0.17.0"
+    
+  },
+  "scripts": {
+    "start": "json-server --watch ./data.json",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "\"shubham\"",
+  "license": "ISC"
+}

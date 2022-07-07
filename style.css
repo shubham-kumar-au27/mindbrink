@@ -1,0 +1,54 @@
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro);
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: lightyellow;
+}
+#navbar{
+    background-color: black;
+    color: aliceblue;
+}
+.container{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    margin: 50px;
+}
+
+
+#allData{
+    margin: 20px;
+    width:150px;
+    height:120px;
+    border: 1px solid red;
+    background-color: aqua;
+    align-content: center;
+    float: left;
+
+    
+};
+#searchBar{
+    background-color: blue;
+
+}
+.inputBox{
+    background-color: aqua;
+    color: black
+
+}
+/* for chart-------------- */
+
+body {
+    font-size: 15px;
+    font-family: 'Source Sans Pro', sans-serif;
+    color: #333;
+  }
+  
+  
+  input {
+    border: 1px dotted;
+    width: 50%;
+  }
+  
