@@ -2847,9 +2847,8 @@ function filtermaleFemale(male,female){
 
 //filter Function-------
 let select = document.getElementById('searchBar').value;
-
+let XYZ = 0; let JBC = 0; let NVS = 0 ;let NCS =0; let KLM =0;let NSP =0;
 function getFilteredData(){
-    let XYZ = 0; let JBC = 0; let NVS = 0;let NCS = 0; let KLM = 0;let NSP = 0;
         Data.forEach(data =>{
             if (select){
                 if (data.Constituency == select){
@@ -2995,5 +2994,4 @@ let Group18_30 =0; let Group30_45 = 0;let Group45_60 = 0; let Group60 = 0
 }
 
 
-
-
+getFilteredData()
