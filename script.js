@@ -2863,10 +2863,11 @@ function filtermaleFemale(male,female){
     // -------------------------------------
 
 //filter Function-------
-let select = document.getElementById('searchBar').value;
+// let select = document.getElementById('searchBar').value;
 
 
 function getFilteredData(){
+    let select = document.getElementById('searchBar').value;
     const PartyData = () =>{
         let XYZ = 0; let JBC = 0; let NVS = 0;let NCS = 0; let KLM = 0;let NSP = 0;
 
@@ -2900,7 +2901,6 @@ function getFilteredData(){
     const partyChart = () =>{
         const partylabel = ['XYZ','JBC','NVS','NCS','KLM','NSP']
         const partyvalue = [XYZ,JBC,NVS,NCS,KLM,NSP];
-
         const data = {
             labels: partylabel,
             datasets: [{
